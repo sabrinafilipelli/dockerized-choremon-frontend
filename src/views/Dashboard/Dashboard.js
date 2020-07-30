@@ -10,12 +10,12 @@ import { ReactComponent as ListIcon } from "../../assets/dashboard/icons/list.sv
 import { ReactComponent as CalendarIcon } from "../../assets/dashboard/icons/calendar.svg";
 import { ReactComponent as SettingsIcon } from "../../assets/dashboard/icons/settings.svg";
 import axios from "axios";
-import firebase from "../../firebase/firebase.js";
+
 
 const uid = JSON.parse(localStorage.getItem("uid"));
 console.log(uid);
-const user = JSON.parse(localStorage.getItem("user"));
-const url = "https://uffizzi-test.herokuapp.com/api/";
+
+const url = "http://uffizzisample-backend-latest.staging.backend-zhgj1f.qa.app.uffizzi.cloud:9000/api/";
 
 class Dashboard extends Component {
   constructor(props) {

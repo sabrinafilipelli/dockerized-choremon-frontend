@@ -2,7 +2,7 @@ import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 
-const URL = 'https://uffizzi-test.herokuapp.com/api/charge';
+const URL = 'http://uffizzisample-backend-latest.staging.backend-zhgj1f.qa.app.uffizzi.cloud:9000/api/charge';
 
 const successPayment = (data) => {
 	alert('Payment Successful');
@@ -56,7 +56,7 @@ export default class BillingPage extends React.Component {
 										label="Choose Premium"
 										currency="USD"
                     name="ListMonkey"
-               
+
 									/>
 								</div>
 								<div className="card-panel">

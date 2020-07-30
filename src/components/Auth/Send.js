@@ -14,7 +14,7 @@ const Send = () => {
     profilePicture: photoURL
   };
 
-  let url = "https://uffizzi-test.herokuapp.com/api/users";
+  let url = "http://uffizzisample-backend-latest.staging.backend-zhgj1f.qa.app.uffizzi.cloud:9000/api/users";
 
   // deleteUserFromDB();
   localStorage.setItem("uid", JSON.stringify(user.uid));

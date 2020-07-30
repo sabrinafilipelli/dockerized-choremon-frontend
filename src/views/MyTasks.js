@@ -10,7 +10,7 @@ import TaskTable from "./Group/TaskTable";
 
 const uid = JSON.parse(localStorage.getItem("uid"));
 const user = JSON.parse(localStorage.getItem("user"));
-const url = "https://uffizzi-test.herokuapp.com/api";
+const url = "http://uffizzisample-backend-latest.staging.backend-zhgj1f.qa.app.uffizzi.cloud:9000/api";
 
 class MyTasks extends Component {
     constructor(props) {
@@ -65,8 +65,8 @@ class MyTasks extends Component {
         .get(`https://uffizzi-test.herokuapp.com/api/group/${groupId}`)
         .then(res => {
         this.setState({
-            tasks: [ 
-                ...this.state.tasks, 
+            tasks: [
+                ...this.state.tasks,
                 { groupId: groupId, tasks: res.data.tasks.filter(task => task.assignedTo == this.state.uid)} ],
         });
         });
@@ -87,7 +87,7 @@ class MyTasks extends Component {
                                 <th>{group["name"]} </th>
                             {this.state.tasks
                                 ?
-                                this.state.tasks.map(taskObject => 
+                                this.state.tasks.map(taskObject =>
                                     {
                                         return (
 
